@@ -12,7 +12,7 @@ func TestGetAPIKey(t *testing.T) {
 		input http.Header
 		want  string
 	}{
-		"No Header":              {"no header", http.Header{}, "Header"},
+		"No Header":              {"no header", http.Header{}, ""},
 		"Empty Header":           {"empty header", http.Header{"Authorization": []string{""}}, ""},
 		"Wrong Schema":           {"wrong schema", http.Header{"Authorization": []string{"Bearer xyz"}}, ""},
 		"Missing Key":            {"missing key", http.Header{"Authorization": []string{"ApiKey"}}, ""},
