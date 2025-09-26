@@ -23,7 +23,7 @@ jobs:
     
     name: Style
     runs-on: ubuntu-latest
-
+  tests:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
